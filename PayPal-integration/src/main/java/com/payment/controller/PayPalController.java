@@ -70,7 +70,7 @@ public class PayPalController {
                 return "paymentSuccess";
             }
         } catch (PayPalRESTException e){
-            log.error("Error occured: ",e);
+            log.error("Error occurred: ",e);
         }
         return "paymentSuccess";
 
@@ -81,7 +81,7 @@ public class PayPalController {
         return "paymentCancel";
     }
 
-    @GetMapping("/payment/cancel")
+    @GetMapping("/payment/error")
     public String paymentError(){
         return "paymentError";
     }
