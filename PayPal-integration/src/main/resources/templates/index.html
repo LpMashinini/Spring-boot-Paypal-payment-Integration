@@ -16,7 +16,7 @@
     <div class="container">
         <h1 class="text-center mt-5">Paypal Payment Integration</h1>
 
-        <form action="/payment/create" method="post" class="mt-5 card p-3">
+        <form th:action="@{/payment/create}" method="post">
 
             <div class="d-flex justify-content-center">
                 <button type="submit"

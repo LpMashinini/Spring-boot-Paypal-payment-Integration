@@ -1,4 +1,4 @@
-package com.payment.controller;
+package com.payment.PayPal_integration.controller;
 
 import com.payment.PayPal_integration.service.PayPalService;
 import com.paypal.api.payments.Links;
@@ -22,6 +22,7 @@ public class PayPalController {
 
     @GetMapping("/")
     public String home(){
+
         return "index";
     }
 
@@ -60,7 +61,7 @@ public class PayPalController {
     @GetMapping("/payment/success")
     public String paymentSuccess(
             @RequestParam("paymentId") String paymentId,
-            @RequestParam("payerId") String payerId
+            @RequestParam("payerID") String payerId
     )
     {
         try{
